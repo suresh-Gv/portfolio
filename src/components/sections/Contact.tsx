@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useState, type FormEvent } from 'react';
-import { HiLocationMarker, HiMail, HiPaperAirplane } from 'react-icons/hi';
+import { HiLocationMarker, HiMail, HiPaperAirplane, HiPhone } from 'react-icons/hi';
 import { personalInfo, socialLinks } from '../../data/portfolioData';
 import type { ContactFormData } from '../../types';
 import ScrollReveal from '../common/ScrollReveal';
@@ -79,7 +79,7 @@ export default function Contact() {
                   </Box>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
                   <Box
                     sx={{
                       p: 1.5,
@@ -102,6 +102,33 @@ export default function Contact() {
                       sx={{ color: 'primary.main', textDecoration: 'none', fontWeight: 500 }}
                     >
                       {personalInfo.email}
+                    </Typography>
+                  </Box>
+                </Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
+                  <Box
+                    sx={{
+                      p: 1.5,
+                      borderRadius: 2,
+                      bgcolor: 'action.hover',
+                      color: 'primary.main',
+                      display: 'flex',
+                    }}
+                  >
+                    <HiPhone size={22} />
+                  </Box>
+                  <Box>
+                    <Typography variant="body2" color="text.secondary">
+                      Phone
+                    </Typography>
+                    <Typography
+                      component="a"
+                      href={`tel:${personalInfo.phone.replace(/\s/g, '')}`}
+                      variant="body1"
+                      sx={{ color: 'primary.main', textDecoration: 'none', fontWeight: 500 }}
+                    >
+                      {personalInfo.phone}
                     </Typography>
                   </Box>
                 </Box>

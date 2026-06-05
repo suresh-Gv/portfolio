@@ -1,6 +1,6 @@
 import type {
   Achievement,
-  Certification,
+  EducationItem,
   ExperienceItem,
   NavItem,
   Project,
@@ -11,21 +11,29 @@ import type {
 } from '../types';
 
 export const personalInfo = {
-  name: 'Suresh K',
+  name: 'Suresh Govindhasamy',
+  shortName: 'Suresh G',
   title: 'Senior Software Engineer',
   tagline:
-    'Building scalable web and mobile applications with React, AWS, and modern cloud technologies.',
-  email: 'suresh.k@email.com',
-  location: 'Chennai, Tamil Nadu, India',
+    'Building scalable web and mobile applications with React, React Native, AWS, and modern cloud technologies.',
+  email: 'gv.suresh02@gmail.com',
+  phone: '+91 8056728199',
+  location: 'Puducherry, India',
   resumeUrl: '/resume.pdf',
   aboutSummary:
-    'Experienced Senior Software Engineer with over 10 years of expertise in designing, developing, and optimizing enterprise-grade web and mobile applications. Specialized in React.js, Redux, AWS, cloud integrations, performance optimization, and scalable software architecture.',
+    'Senior Software Engineer with 10+ years of experience in web and mobile application development. Specialized in React.js, React Native, Node.js, PHP, Healthcare Applications, CRM Systems, AWS integrations, application security, and performance optimization.',
+  aboutParagraphs: [
+    'I am a Senior Software Engineer with over 10 years of experience designing, developing, and maintaining enterprise-grade web and mobile applications.',
+    'My expertise includes React.js, React Native, Node.js, PHP, MySQL, AWS, healthcare systems, CRM platforms, application security, and performance optimization.',
+    'I enjoy solving complex technical challenges, improving application performance, implementing secure architectures, and delivering scalable software solutions that create business value.',
+  ],
+  languages: ['Tamil', 'English'],
 };
 
 export const socialLinks: SocialLink[] = [
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/suresh-k', icon: 'linkedin' },
   { name: 'GitHub', url: 'https://github.com/suresh-Gv', icon: 'github' },
-  { name: 'Email', url: 'mailto:suresh.k@email.com', icon: 'email' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/suresh-govindhasamy', icon: 'linkedin' },
+  { name: 'Email', url: 'mailto:gv.suresh02@gmail.com', icon: 'email' },
 ];
 
 export const navItems: NavItem[] = [
@@ -35,24 +43,25 @@ export const navItems: NavItem[] = [
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Services', href: '#services' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Education', href: '#education' },
 ];
 
 export const stats: StatCard[] = [
   { value: '10+', label: 'Years Experience', icon: 'experience' },
-  { value: '50+', label: 'Projects Delivered', icon: 'projects' },
-  { value: 'Enterprise', label: 'Application Specialist', icon: 'enterprise' },
-  { value: 'Expert', label: 'Frontend & Cloud Expert', icon: 'expert' },
+  { value: '5', label: 'Industries Served', icon: 'industries' },
+  { value: 'Healthcare', label: 'Platform Specialist', icon: 'healthcare' },
+  { value: 'Full Stack', label: 'Web & Mobile Expert', icon: 'expert' },
 ];
 
 export const highlights: string[] = [
-  'React & Frontend Development',
-  'AWS Cloud Services',
-  'Mobile Application Development',
+  'React.js & React Native',
+  'Healthcare & EHR Systems',
+  'CRM & Logistics Platforms',
+  'AWS Secrets Manager',
+  'Application Security',
+  'BLE Device Integration',
+  'REST API Development',
   'Performance Optimization',
-  'Security Enhancements',
-  'API Integration',
-  'Enterprise Application Development',
 ];
 
 export const skillCategories: SkillCategory[] = [
@@ -61,41 +70,40 @@ export const skillCategories: SkillCategory[] = [
     icon: 'frontend',
     skills: [
       { name: 'React.js', proficiency: 95 },
-      { name: 'Redux', proficiency: 90 },
+      { name: 'React Native', proficiency: 90 },
       { name: 'JavaScript', proficiency: 95 },
-      { name: 'TypeScript', proficiency: 90 },
-      { name: 'Material UI', proficiency: 88 },
       { name: 'HTML5', proficiency: 95 },
       { name: 'CSS3', proficiency: 90 },
+      { name: 'jQuery', proficiency: 82 },
     ],
   },
   {
     title: 'Backend',
     icon: 'backend',
     skills: [
-      { name: 'Node.js', proficiency: 85 },
+      { name: 'Node.js', proficiency: 88 },
       { name: 'Express.js', proficiency: 85 },
-      { name: 'REST APIs', proficiency: 90 },
-    ],
-  },
-  {
-    title: 'Cloud & DevOps',
-    icon: 'cloud',
-    skills: [
-      { name: 'AWS', proficiency: 88 },
-      { name: 'Secrets Manager', proficiency: 85 },
-      { name: 'Lambda', proficiency: 80 },
-      { name: 'S3', proficiency: 85 },
-      { name: 'CI/CD', proficiency: 82 },
+      { name: 'PHP', proficiency: 90 },
+      { name: 'Laravel', proficiency: 88 },
+      { name: 'CodeIgniter', proficiency: 85 },
     ],
   },
   {
     title: 'Database',
     icon: 'database',
     skills: [
-      { name: 'MySQL', proficiency: 85 },
+      { name: 'MySQL', proficiency: 90 },
       { name: 'MongoDB', proficiency: 80 },
-      { name: 'SQL Server', proficiency: 82 },
+    ],
+  },
+  {
+    title: 'Cloud & Security',
+    icon: 'security',
+    skills: [
+      { name: 'AWS Secrets Manager', proficiency: 88 },
+      { name: 'Application Security', proficiency: 85 },
+      { name: 'OWASP ZAP', proficiency: 82 },
+      { name: 'Semgrep', proficiency: 80 },
     ],
   },
   {
@@ -103,10 +111,24 @@ export const skillCategories: SkillCategory[] = [
     icon: 'tools',
     skills: [
       { name: 'Git', proficiency: 92 },
-      { name: 'Jenkins', proficiency: 78 },
-      { name: 'Solr', proficiency: 75 },
-      { name: 'Twilio', proficiency: 80 },
-      { name: 'ImageMagick', proficiency: 72 },
+      { name: 'GitHub', proficiency: 90 },
+      { name: 'Bitbucket', proficiency: 85 },
+      { name: 'Apache Solr', proficiency: 78 },
+      { name: 'Postman', proficiency: 88 },
+      { name: 'VS Code', proficiency: 95 },
+      { name: 'Cursor AI', proficiency: 85 },
+    ],
+  },
+  {
+    title: 'Specializations',
+    icon: 'specialization',
+    skills: [
+      { name: 'REST API Development', proficiency: 92 },
+      { name: 'Performance Optimization', proficiency: 90 },
+      { name: 'Third-Party Integrations', proficiency: 88 },
+      { name: 'Twilio Integration', proficiency: 85 },
+      { name: 'BLE Device Integration', proficiency: 82 },
+      { name: 'ImageMagick Customization', proficiency: 80 },
     ],
   },
 ];
@@ -114,125 +136,228 @@ export const skillCategories: SkillCategory[] = [
 export const experience: ExperienceItem[] = [
   {
     title: 'Senior Software Engineer',
-    period: 'January 2015 – Present',
+    company: 'Voyage Software Technologies',
+    period: 'January 2020 – Present',
     responsibilities: [
-      'Enterprise application development',
-      'React architecture design',
-      'Performance optimization',
-      'Security implementation',
-      'AWS cloud integration',
-      'Team mentoring',
-      'Code reviews',
-      'Technical leadership',
+      'Developed enterprise web and mobile applications using React.js, React Native, PHP, and MySQL',
+      'Implemented AWS Secrets Manager integration for secure credential management',
+      'Improved application security by addressing vulnerabilities identified through Semgrep and OWASP ZAP',
+      'Optimized frontend and backend performance',
+      'Resolved production issues and improved system reliability',
+      'Worked within cross-functional teams to deliver scalable solutions',
+    ],
+    achievements: [
+      'Enhanced application security across enterprise applications',
+      'Improved application performance through query optimization and code refactoring',
+      'Successfully implemented AWS Secrets Manager integrations',
+    ],
+  },
+  {
+    title: 'Junior Software Engineer',
+    company: 'Voyage Software Technologies',
+    period: 'October 2016 – December 2019',
+    responsibilities: [
+      'Developed features for Drupal and Laravel applications',
+      'Integrated BLE healthcare devices with mobile applications',
+      'Collaborated with development teams to deliver healthcare solutions',
+    ],
+    achievements: [
+      'Implemented real-time healthcare data collection systems',
+      'Successfully integrated BLE medical devices',
+    ],
+  },
+  {
+    title: 'Junior Software Engineer',
+    company: 'Smart Site Solution',
+    period: 'August 2015 – September 2016',
+    responsibilities: [
+      'Developed design tool applications',
+      'Built e-commerce platforms using CodeIgniter and Laravel',
+      'Customized image generation solutions using ImageMagick',
     ],
   },
 ];
 
 export const projects: Project[] = [
   {
-    id: 'tms',
-    title: 'Transport Management System (TMS)',
+    id: 'shipcrm',
+    title: 'ShipCRM',
+    industry: 'CRM / Logistics',
     description:
-      'Enterprise transportation platform for fleet management, route planning, reporting, and operations monitoring.',
-    technologies: ['React.js', 'Node.js', 'AWS'],
-    features: ['Fleet Management', 'Route Planning', 'Dashboard Analytics', 'Reports & Monitoring'],
-    demoUrl: '#',
-    githubUrl: 'https://github.com/suresh-Gv',
+      'CRM platform for logistics and shipping operations that supports customer management, sales workflows, operational tracking, and business process automation.',
+    technologies: ['React.js', 'React Native', 'PHP', 'MySQL'],
+    features: ['Customer Management', 'Sales Workflow Automation', 'Operational Tracking', 'Business Process Automation'],
     gradient: 'linear-gradient(135deg, #2563eb 0%, #4f46e5 100%)',
   },
   {
-    id: 'cssp',
-    title: 'Corporate Secretarial Services Platform',
+    id: 'mywellnessbuddy',
+    title: 'MyWellnessBuddy',
+    industry: 'Healthcare / EHR',
     description:
-      'Compliance and document management platform for corporate governance processes.',
-    technologies: ['React.js', 'Node.js', 'MongoDB'],
-    features: ['Compliance Tracking', 'Document Management', 'Notification System', 'Reporting Dashboard'],
-    demoUrl: '#',
-    githubUrl: 'https://github.com/suresh-Gv',
+      'Healthcare platform for patient management and HIPAA-compliant provider-patient communication.',
+    technologies: ['React.js', 'React Native', 'Node.js'],
+    features: ['Care Plan Management', 'Patient Management', 'Telecall Modules', 'BLE Device Integration'],
     gradient: 'linear-gradient(135deg, #4338ca 0%, #6366f1 100%)',
   },
   {
-    id: 'erp',
-    title: 'Enterprise Reporting Platform',
+    id: 'snaphealthcare',
+    title: 'SnapHealthcare',
+    industry: 'Healthcare / EHR',
     description:
-      'Dynamic reporting platform with KPI dashboards, advanced filtering, exports, and performance optimization.',
-    technologies: ['React.js', 'Redux', 'AWS', 'SQL Server'],
-    features: ['KPI Dashboards', 'Dynamic Reports', 'Export to Excel/PDF', 'Performance Improvements'],
-    demoUrl: '#',
-    githubUrl: 'https://github.com/suresh-Gv',
+      'Enterprise healthcare platform for occupational health, employee health, billing, clinical documentation, and EMR management.',
+    technologies: ['React.js', 'React Native', 'Node.js', 'PHP'],
+    features: ['EMR Management', 'Billing', 'Clinical Documentation', 'Secure REST APIs', 'PDF Automation'],
     gradient: 'linear-gradient(135deg, #1e40af 0%, #3730a3 100%)',
+  },
+  {
+    id: 'fullnote',
+    title: 'FullNote',
+    industry: 'Healthcare',
+    description:
+      'Healthcare application for patient records, billing, telecalls, and secure communication between providers and patients.',
+    technologies: ['React.js', 'React Native', 'Node.js', 'PHP'],
+    features: ['Patient Records', 'Billing', 'Telecalls', 'Secure Provider Communication'],
+    gradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
+  },
+  {
+    id: 'calendarpress',
+    title: 'CalendarPress',
+    industry: 'E-Commerce / Design Tools',
+    description:
+      'Online customization platform for personalized calendars with dynamic image generation and design tool workflows.',
+    technologies: ['PHP', 'Laravel', 'CodeIgniter', 'ImageMagick'],
+    features: ['Calendar Customization', 'Dynamic Image Generation', 'ImageMagick Integration', 'Design Tool Workflows'],
+    gradient: 'linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)',
+  },
+  {
+    id: 'wedding-playing-cards',
+    title: 'Wedding Playing Cards',
+    industry: 'E-Commerce / Design Tools',
+    description:
+      'E-commerce platform for personalized wedding playing cards with custom image uploads and automated card generation.',
+    technologies: ['PHP', 'Laravel', 'CodeIgniter', 'ImageMagick'],
+    features: ['Card Customization', 'Image Upload & Editing', 'Dynamic Image Generation', 'E-Commerce Checkout'],
+    gradient: 'linear-gradient(135deg, #db2777 0%, #7c3aed 100%)',
   },
 ];
 
 export const achievements: Achievement[] = [
   {
-    title: '40% Faster Load Times',
-    description: 'Reduced application load time by 40% through performance optimization strategies.',
-    icon: 'speed',
+    title: '10+ Years Experience',
+    description: 'Over a decade of professional software development across healthcare, CRM, and enterprise domains.',
+    icon: 'experience',
   },
   {
-    title: 'AWS Secrets Manager',
-    description: 'Implemented AWS Secrets Manager integrations for secure credential management.',
-    icon: 'security',
+    title: 'Healthcare Platforms',
+    description: 'Built enterprise healthcare platforms including EHR, patient management, and HIPAA-compliant systems.',
+    icon: 'healthcare',
   },
   {
-    title: 'BLE Mobile Apps',
-    description: 'Developed BLE-integrated mobile applications for enterprise IoT solutions.',
+    title: 'CRM for Logistics',
+    description: 'Developed CRM systems for logistics industry with sales workflow and operational tracking.',
+    icon: 'crm',
+  },
+  {
+    title: 'BLE Medical Devices',
+    description: 'Integrated BLE medical devices with mobile applications for real-time healthcare data collection.',
     icon: 'mobile',
   },
   {
-    title: 'Twilio Integration',
-    description: 'Integrated Twilio communication solutions for real-time notifications.',
-    icon: 'communication',
+    title: 'AWS Secrets Manager',
+    description: 'Implemented AWS Secrets Manager for secure credential management across enterprise applications.',
+    icon: 'security',
   },
   {
-    title: 'Enterprise Dashboards',
-    description: 'Built enterprise-scale dashboard applications with real-time analytics.',
-    icon: 'dashboard',
+    title: 'Security Enhancements',
+    description: 'Enhanced application security using OWASP ZAP and Semgrep vulnerability assessments.',
+    icon: 'shield',
   },
   {
-    title: 'Redux Optimization',
-    description: 'Optimized complex React Redux applications for improved maintainability.',
+    title: 'React Native Apps',
+    description: 'Developed React Native mobile applications for healthcare and enterprise use cases.',
+    icon: 'reactnative',
+  },
+  {
+    title: 'Performance Optimization',
+    description: 'Optimized application performance and reliability through query optimization and code refactoring.',
     icon: 'optimization',
+  },
+  {
+    title: 'Secure REST APIs',
+    description: 'Built secure REST APIs with third-party integrations for healthcare and business platforms.',
+    icon: 'api',
+  },
+  {
+    title: 'Twilio Integration',
+    description: 'Implemented Twilio communication integrations for real-time notifications and telecalls.',
+    icon: 'communication',
   },
 ];
 
 export const services: Service[] = [
   {
-    title: 'React Development',
-    description: 'Building modern, responsive web applications with React.js and TypeScript.',
+    title: 'React.js Development',
+    description: 'Building modern, responsive web applications with React.js for enterprise and healthcare platforms.',
     icon: 'react',
   },
   {
-    title: 'Frontend Architecture',
-    description: 'Designing scalable frontend architectures for enterprise applications.',
-    icon: 'architecture',
+    title: 'React Native Development',
+    description: 'Cross-platform mobile applications with BLE integrations and healthcare workflows.',
+    icon: 'reactnative',
   },
   {
-    title: 'Performance Optimization',
-    description: 'Optimizing application performance, load times, and user experience.',
-    icon: 'performance',
+    title: 'Full Stack Development',
+    description: 'End-to-end development with React, Node.js, PHP, and MySQL for scalable business solutions.',
+    icon: 'fullstack',
   },
   {
-    title: 'AWS Integration',
-    description: 'Integrating AWS cloud services including Lambda, S3, and Secrets Manager.',
-    icon: 'aws',
+    title: 'Healthcare Software',
+    description: 'HIPAA-compliant healthcare platforms, EHR systems, and patient management applications.',
+    icon: 'healthcare',
+  },
+  {
+    title: 'CRM Development',
+    description: 'Custom CRM solutions for logistics, sales workflows, and business process automation.',
+    icon: 'crm',
   },
   {
     title: 'API Development',
-    description: 'Developing robust REST APIs with Node.js and Express.js.',
+    description: 'Secure REST APIs with third-party integrations, PDF automation, and webhook support.',
     icon: 'api',
   },
   {
+    title: 'AWS Integration',
+    description: 'AWS Secrets Manager and cloud service integrations for secure enterprise deployments.',
+    icon: 'aws',
+  },
+  {
+    title: 'Application Security',
+    description: 'Security improvements using OWASP ZAP, Semgrep, and secure architecture best practices.',
+    icon: 'security',
+  },
+  {
+    title: 'Performance Optimization',
+    description: 'Frontend and backend optimization, query tuning, and system reliability improvements.',
+    icon: 'performance',
+  },
+  {
     title: 'Technical Consulting',
-    description: 'Providing technical guidance on architecture, best practices, and team mentoring.',
+    description: 'Architecture guidance, code reviews, and technical leadership for development teams.',
     icon: 'consulting',
   },
 ];
 
-export const certifications: Certification[] = [
-  { title: 'AWS Certification', issuer: 'Amazon Web Services', year: '2023', icon: 'aws' },
-  { title: 'React Certification', issuer: 'Meta / Coursera', year: '2022', icon: 'react' },
-  { title: 'Agile Methodology', issuer: 'Scrum Alliance', year: '2021', icon: 'agile' },
-  { title: 'Software Architecture', issuer: 'Professional Development', year: '2020', icon: 'architecture' },
+export const education: EducationItem[] = [
+  {
+    degree: 'Master of Computer Applications (MCA)',
+    institution: 'Christ College of Engineering & Technology',
+    location: 'Puducherry',
+    icon: 'masters',
+  },
+  {
+    degree: 'Bachelor of Science - Computer Science',
+    institution: 'Aravindar Arts & Science College',
+    location: 'Puducherry',
+    icon: 'bachelors',
+  },
 ];

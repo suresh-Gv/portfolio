@@ -1,16 +1,15 @@
 import { Avatar, Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import { HiDownload, HiMail } from 'react-icons/hi';
+import { HiDownload } from 'react-icons/hi';
 import { personalInfo, socialLinks, stats } from '../../data/portfolioData';
 import AnimatedCounter from '../common/AnimatedCounter';
 import ScrollReveal from '../common/ScrollReveal';
 import SocialIcons from '../common/SocialIcons';
-import { scrollToSection } from '../../utils/scrollTo';
 
 const statIcons: Record<string, string> = {
   experience: '🏆',
-  projects: '🚀',
-  enterprise: '🏢',
+  industries: '🌐',
+  healthcare: '🏥',
   expert: '⚡',
 };
 
@@ -140,19 +139,6 @@ export default function Hero() {
                 >
                   Download Resume
                 </Button>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  startIcon={<HiMail size={20} />}
-                  onClick={() => scrollToSection('#contact')}
-                  sx={{
-                    borderColor: 'primary.main',
-                    color: 'primary.main',
-                    '&:hover': { borderColor: 'primary.dark', bgcolor: 'rgba(37,99,235,0.04)' },
-                  }}
-                >
-                  Contact Me
-                </Button>
               </Box>
             </ScrollReveal>
             <ScrollReveal delay={0.5}>
@@ -179,7 +165,7 @@ export default function Hero() {
                       borderColor: 'background.paper',
                     }}
                   >
-                    SK
+                    SG
                   </Avatar>
                 </motion.div>
               </Box>

@@ -6,19 +6,26 @@ import {
   HiCloud,
   HiCode,
   HiCog,
+  HiDeviceMobile,
   HiLightningBolt,
+  HiShieldCheck,
   HiTemplate,
 } from 'react-icons/hi';
+import { FaReact } from 'react-icons/fa';
 import { services } from '../../data/portfolioData';
 import ScrollReveal from '../common/ScrollReveal';
 import SectionHeading from '../common/SectionHeading';
 
 const serviceIcons: Record<string, ReactNode> = {
   react: <HiCode size={28} />,
-  architecture: <HiTemplate size={28} />,
-  performance: <HiLightningBolt size={28} />,
-  aws: <HiCloud size={28} />,
+  reactnative: <FaReact size={28} />,
+  fullstack: <HiTemplate size={28} />,
+  healthcare: <HiDeviceMobile size={28} />,
+  crm: <HiCog size={28} />,
   api: <HiCog size={28} />,
+  aws: <HiCloud size={28} />,
+  security: <HiShieldCheck size={28} />,
+  performance: <HiLightningBolt size={28} />,
   consulting: <HiChatAlt2 size={28} />,
 };
 
@@ -33,13 +40,13 @@ export default function Services() {
         <SectionHeading
           subtitle="Services"
           title="What I Offer"
-          description="Professional services tailored for enterprise-grade software development."
+          description="Professional services across healthcare, CRM, full stack, and enterprise software development."
         />
 
         <Grid container spacing={3}>
           {services.map((service, index) => (
             <Grid key={service.title} size={{ xs: 12, sm: 6, md: 4 }}>
-              <ScrollReveal delay={index * 0.1}>
+              <ScrollReveal delay={index * 0.08}>
                 <motion.div whileHover={{ y: -6, scale: 1.02 }} transition={{ duration: 0.3 }}>
                   <Paper
                     elevation={0}
@@ -70,7 +77,7 @@ export default function Services() {
                         color: '#fff',
                       }}
                     >
-                      {serviceIcons[service.icon]}
+                      {serviceIcons[service.icon] ?? <HiCode size={28} />}
                     </Box>
                     <Typography variant="h6" sx={{ mb: 1, fontWeight: 700 }}>
                       {service.title}

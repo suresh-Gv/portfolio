@@ -1,6 +1,5 @@
-import { Box, Button, Chip, Container, Grid, Paper, Typography } from '@mui/material';
+import { Box, Chip, Container, Grid, Paper, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { HiDesktopComputer } from 'react-icons/hi';
 import { projects } from '../../data/portfolioData';
 import ScrollReveal from '../common/ScrollReveal';
@@ -17,12 +16,12 @@ export default function Projects() {
         <SectionHeading
           subtitle="Projects"
           title="Featured Work"
-          description="Enterprise applications built with modern technologies and scalable architectures."
+          description="Healthcare, CRM, logistics, and e-commerce platforms built with modern technologies."
         />
 
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid key={project.id} size={{ xs: 12, md: 4 }}>
+            <Grid key={project.id} size={{ xs: 12, sm: 6, lg: 4 }}>
               <ScrollReveal delay={index * 0.15}>
                 <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
                   <Paper
@@ -78,6 +77,18 @@ export default function Projects() {
                     </Box>
 
                     <Box sx={{ p: 3, flex: 1, display: 'flex', flexDirection: 'column' }}>
+                      <Chip
+                        label={project.industry}
+                        size="small"
+                        sx={{
+                          alignSelf: 'flex-start',
+                          mb: 1.5,
+                          bgcolor: 'primary.main',
+                          color: '#fff',
+                          fontWeight: 500,
+                          fontSize: '0.7rem',
+                        }}
+                      />
                       <Typography variant="h6" sx={{ mb: 1, fontWeight: 700 }}>
                         {project.title}
                       </Typography>
@@ -100,7 +111,7 @@ export default function Projects() {
                         ))}
                       </Box>
 
-                      <Box sx={{ mb: 2 }}>
+                      <Box>
                         {project.features.map((feature) => (
                           <Typography
                             key={feature}
@@ -111,33 +122,6 @@ export default function Projects() {
                             • {feature}
                           </Typography>
                         ))}
-                      </Box>
-
-                      <Box sx={{ display: 'flex', gap: 1.5, mt: 'auto' }}>
-                        <Button
-                          component="a"
-                          variant="contained"
-                          size="small"
-                          startIcon={<FaExternalLinkAlt size={12} />}
-                          href={project.demoUrl ?? '#'}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          sx={{ flex: 1 }}
-                        >
-                          Demo
-                        </Button>
-                        <Button
-                          component="a"
-                          variant="outlined"
-                          size="small"
-                          startIcon={<FaGithub size={14} />}
-                          href={project.githubUrl ?? '#'}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          sx={{ flex: 1 }}
-                        >
-                          GitHub
-                        </Button>
                       </Box>
                     </Box>
                   </Paper>

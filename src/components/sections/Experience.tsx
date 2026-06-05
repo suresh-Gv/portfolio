@@ -12,7 +12,7 @@ export default function Experience() {
         <SectionHeading
           subtitle="Experience"
           title="Professional Journey"
-          description="A decade of building and leading enterprise software solutions."
+          description="A decade of building healthcare, CRM, and enterprise software solutions."
         />
 
         <Box sx={{ position: 'relative', pl: { xs: 3, md: 4 } }}>
@@ -28,12 +28,9 @@ export default function Experience() {
           />
 
           {experience.map((item, index) => (
-            <ScrollReveal key={item.title} delay={index * 0.15}>
+            <ScrollReveal key={`${item.company}-${item.period}`} delay={index * 0.15}>
               <Box sx={{ position: 'relative', mb: 4 }}>
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                   <Box
                     sx={{
                       position: 'absolute',
@@ -78,12 +75,19 @@ export default function Experience() {
                         <Typography variant="h5" sx={{ fontWeight: 700 }}>
                           {item.title}
                         </Typography>
-                        <Typography variant="body2" color="primary.main" sx={{ mt: 0.5, fontWeight: 600 }}>
+                        <Typography variant="body1" color="primary.main" sx={{ mt: 0.5, fontWeight: 600 }}>
+                          {item.company}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
                           {item.period}
                         </Typography>
                       </Box>
                     </Box>
-                    <Box component="ul" sx={{ m: 0, pl: 2.5 }}>
+
+                    <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
+                      Responsibilities
+                    </Typography>
+                    <Box component="ul" sx={{ m: 0, pl: 2.5, mb: item.achievements ? 2 : 0 }}>
                       {item.responsibilities.map((resp) => (
                         <Typography
                           key={resp}
@@ -96,6 +100,27 @@ export default function Experience() {
                         </Typography>
                       ))}
                     </Box>
+
+                    {item.achievements && item.achievements.length > 0 && (
+                      <>
+                        <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
+                          Achievements
+                        </Typography>
+                        <Box component="ul" sx={{ m: 0, pl: 2.5 }}>
+                          {item.achievements.map((achievement) => (
+                            <Typography
+                              key={achievement}
+                              component="li"
+                              variant="body2"
+                              color="text.secondary"
+                              sx={{ mb: 1, lineHeight: 1.7 }}
+                            >
+                              {achievement}
+                            </Typography>
+                          ))}
+                        </Box>
+                      </>
+                    )}
                   </Paper>
                 </motion.div>
               </Box>

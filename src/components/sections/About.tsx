@@ -34,9 +34,20 @@ export default function About() {
                     background: 'linear-gradient(180deg, #2563eb, #4f46e5)',
                   }}
                 />
-                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.9, fontSize: '1.05rem' }}>
-                  {personalInfo.aboutSummary}
-                </Typography>
+                {personalInfo.aboutParagraphs.map((paragraph, index) => (
+                  <Typography
+                    key={index}
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{
+                      lineHeight: 1.9,
+                      fontSize: '1.05rem',
+                      mb: index < personalInfo.aboutParagraphs.length - 1 ? 2 : 0,
+                    }}
+                  >
+                    {paragraph}
+                  </Typography>
+                ))}
               </Paper>
             </ScrollReveal>
           </Grid>

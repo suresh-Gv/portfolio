@@ -7,19 +7,25 @@ import {
   HiLightningBolt,
   HiPhone,
   HiShieldCheck,
+  HiStar,
   HiTrendingUp,
 } from 'react-icons/hi';
+import { FaReact } from 'react-icons/fa';
 import { achievements } from '../../data/portfolioData';
 import ScrollReveal from '../common/ScrollReveal';
 import SectionHeading from '../common/SectionHeading';
 
 const achievementIcons: Record<string, ReactNode> = {
-  speed: <HiLightningBolt size={28} />,
-  security: <HiShieldCheck size={28} />,
+  experience: <HiStar size={28} />,
+  healthcare: <HiChartBar size={28} />,
+  crm: <HiTrendingUp size={28} />,
   mobile: <HiDeviceMobile size={28} />,
+  security: <HiShieldCheck size={28} />,
+  shield: <HiShieldCheck size={28} />,
+  reactnative: <FaReact size={28} />,
+  optimization: <HiLightningBolt size={28} />,
+  api: <HiChartBar size={28} />,
   communication: <HiPhone size={28} />,
-  dashboard: <HiChartBar size={28} />,
-  optimization: <HiTrendingUp size={28} />,
 };
 
 export default function Achievements() {
@@ -29,13 +35,13 @@ export default function Achievements() {
         <SectionHeading
           subtitle="Achievements"
           title="Key Accomplishments"
-          description="Measurable impact across performance, security, and enterprise delivery."
+          description="Measurable impact across healthcare, security, performance, and enterprise delivery."
         />
 
         <Grid container spacing={3}>
           {achievements.map((item, index) => (
             <Grid key={item.title} size={{ xs: 12, sm: 6, md: 4 }}>
-              <ScrollReveal delay={index * 0.1}>
+              <ScrollReveal delay={index * 0.08}>
                 <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }}>
                   <Paper
                     elevation={0}

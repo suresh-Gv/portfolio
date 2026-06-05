@@ -23,19 +23,19 @@ export interface SkillCategory {
 
 export interface ExperienceItem {
   title: string;
-  company?: string;
+  company: string;
   period: string;
   responsibilities: string[];
+  achievements?: string[];
 }
 
 export interface Project {
   id: string;
   title: string;
+  industry: string;
   description: string;
   technologies: string[];
   features: string[];
-  demoUrl?: string;
-  githubUrl?: string;
   gradient: string;
 }
 
@@ -51,10 +51,10 @@ export interface Service {
   icon: string;
 }
 
-export interface Certification {
-  title: string;
-  issuer: string;
-  year: string;
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  location: string;
   icon: string;
 }
 

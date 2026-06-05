@@ -3,10 +3,11 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
   HiChip,
-  HiCloud,
   HiCode,
   HiDatabase,
   HiServer,
+  HiShieldCheck,
+  HiStar,
 } from 'react-icons/hi';
 import { skillCategories } from '../../data/portfolioData';
 import ScrollReveal from '../common/ScrollReveal';
@@ -15,9 +16,10 @@ import SectionHeading from '../common/SectionHeading';
 const categoryIcons: Record<string, ReactNode> = {
   frontend: <HiCode size={24} />,
   backend: <HiServer size={24} />,
-  cloud: <HiCloud size={24} />,
   database: <HiDatabase size={24} />,
+  security: <HiShieldCheck size={24} />,
   tools: <HiChip size={24} />,
+  specialization: <HiStar size={24} />,
 };
 
 function SkillBar({ name, proficiency, delay }: { name: string; proficiency: number; delay: number }) {
@@ -66,12 +68,12 @@ export default function Skills() {
         <SectionHeading
           subtitle="Skills"
           title="Technical Proficiency"
-          description="A comprehensive toolkit built over 10+ years of enterprise development."
+          description="A comprehensive toolkit built over 10+ years across healthcare, CRM, and enterprise development."
         />
 
         <Grid container spacing={3}>
           {skillCategories.map((category, catIndex) => (
-            <Grid key={category.title} size={{ xs: 12, sm: 6, lg: 4 }}>
+            <Grid key={category.title} size={{ xs: 12, sm: 6, lg: 4, xl: 4 }}>
               <ScrollReveal delay={catIndex * 0.1}>
                 <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }}>
                   <Paper

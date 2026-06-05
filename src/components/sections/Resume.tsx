@@ -62,7 +62,10 @@ export default function Resume() {
                 <HiDocumentText size={40} />
               </Box>
               <Typography variant="h5" sx={{ mb: 1, fontWeight: 700 }}>
-                {personalInfo.name} — Resume
+                {personalInfo.name}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+                Senior Software Engineer · {personalInfo.location}
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 480, mx: 'auto' }}>
                 Comprehensive overview of 10+ years in enterprise software engineering, including

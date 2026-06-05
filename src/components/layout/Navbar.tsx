@@ -98,7 +98,7 @@ export default function Navbar() {
               textDecoration: 'none',
             }}
           >
-            SK
+            SG
           </Typography>
 
           {!isMobile && (

@@ -54,10 +54,10 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 fontSize: { xs: '2rem', md: '3rem' },
               }}
             >
-              Suresh K
+              Suresh Govindhasamy
             </Typography>
             <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.7)', mb: 4 }}>
-              Senior Software Engineer
+              Senior Software Engineer · Puducherry
             </Typography>
           </motion.div>
 
