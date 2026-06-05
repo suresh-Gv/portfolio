@@ -1,6 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
-import { useCallback, useState } from 'react';
-import LoadingScreen from './components/common/LoadingScreen';
 import BackToTop from './components/layout/BackToTop';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
@@ -15,9 +12,9 @@ import Services from './components/sections/Services';
 import Skills from './components/sections/Skills';
 import { AppThemeProvider } from './context/ThemeContext';
 
-function Portfolio() {
+export default function App() {
   return (
-    <>
+    <AppThemeProvider>
       <Navbar />
       <main>
         <Hero />
@@ -32,20 +29,6 @@ function Portfolio() {
       </main>
       <Footer />
       <BackToTop />
-    </>
-  );
-}
-
-export default function App() {
-  const [loading, setLoading] = useState(true);
-  const handleLoadComplete = useCallback(() => setLoading(false), []);
-
-  return (
-    <AppThemeProvider>
-      <AnimatePresence mode="wait">
-        {loading && <LoadingScreen key="loading" onComplete={handleLoadComplete} />}
-      </AnimatePresence>
-      {!loading && <Portfolio />}
     </AppThemeProvider>
   );
 }
