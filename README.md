@@ -1,6 +1,6 @@
 # Suresh K — Portfolio
 
-A modern, premium, fully responsive personal portfolio website for **Suresh K**, Senior Software Engineer.
+A modern, premium, fully responsive personal portfolio website for **Suresh**, Senior Software Engineer.
 
 ## Tech Stack
 
