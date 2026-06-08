@@ -11,8 +11,7 @@ import type {
 } from '../types';
 
 export const personalInfo = {
-  name: 'Suresh Govindhasamy',
-  shortName: 'Suresh G',
+  name: 'Suresh G',
   title: 'Senior Software Engineer',
   tagline:
     'Building scalable web and mobile applications with React, React Native, AWS, and modern cloud technologies.',

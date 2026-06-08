@@ -54,7 +54,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 fontSize: { xs: '2rem', md: '3rem' },
               }}
             >
-              Suresh Govindhasamy
+              Suresh G
             </Typography>
             <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.7)', mb: 4 }}>
               Senior Software Engineer · Puducherry
